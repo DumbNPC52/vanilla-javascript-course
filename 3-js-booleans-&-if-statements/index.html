@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="NPC" />
+    <meta
+      name="description"
+      content="Learning Booleans and If Statements in JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="JavaScript, Booleans, If Statements, Programming, Coding"
+    />
+    <title>Booleans & If Statements</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1>Booleans & If Statements in JavaScript</h1>
+    <p>
+      Open the console to see the results. Results will also be displayed on a
+      pop-up.
+    </p>
+    <!-- Button to trigger the function -->
+    <button
+      class="check-age-btn"
+      onclick="
+        if (age >= legalAge) {
+        alert(`You are ${age} years, old enough to drive. Required age is ${legalAge}. Congratulations!`);
+        console.log(`You are ${age} years, old enough to drive. Required age is ${legalAge}. Congratulations!`);
+      } else if (age >= 14) {
+        alert(`You are ${age} years, getting closer to being able to drive. Required age is ${legalAge}. Hang in there!`);
+        console.log(`You are ${age} years, getting closer to being able to drive. Required age is ${legalAge}. Hang in there!`);
+      } else {
+        alert(`You are ${age} years, not old enough to drive. Required age is ${legalAge}. Sorry!`);
+        console.log(`You are ${age} years, not old enough to drive. Required age is ${legalAge}. Sorry!`);
+      }"
+    >
+      Verify Driving
+    </button>
+
+    <!-- Javascript Section -->
+    <script>
+      // Booleans and If Statements;
+      if (!true) {
+        console.log('hii there');
+      } else {
+        console.log('bye!!!');
+      }
+
+      // checking if someone is old enough to drive;
+      let age = 15;
+      let legalAge = 16;
+
+      // if (age >= legalAge) {
+      //   console.log(`You are ${age} years, old enough to drive. Required age is ${legalAge}. Congratulations!`);
+      // } else if (age >= 14) {
+      //   console.log(`You are ${age} years, getting closer to being able to drive. Required age is ${legalAge}. Hang in there!`);
+      // } else {
+      //   console.log(`You are ${age} years, not old enough to drive. Required age is ${legalAge}. Sorry!`);
+      // }
+
+      // Logical Operators;
+      let hasLicense = true;
+      let hasGoodVision = true;
+      let isTired = false;
+
+      if (hasLicense && hasGoodVision && !isTired) {
+        console.log('You are able to drive!');
+      } else {
+        console.log('Someone else should drive...');
+      }
+
+      if (hasLicense || hasGoodVision) {
+        console.log('You can drive, but be careful!');
+      } else {
+        console.log('Someone else should drive...');
+      }
+
+      // Truthy and Falsy Values;
+      /* List of Falsy Values: false, 0, '', NaN, null, undefined
+         Everything else is Truthy */
+
+      let num = 0;
+      if (num) {
+        console.log('This value is truthy');
+      } else {
+        console.log('This value is falsy');
+      }
+
+      let cartQuantity = 3;
+      if (cartQuantity) {
+        console.log('You have items in your cart');
+      } else {
+        console.log('Your cart is empty');
+      }
+
+      console.log(!"");
+      console.log('text' / 10);
+
+      let numberOne;
+      if (numberOne) {
+        console.log('This value is truthy');
+      } else {
+        console.log('This value is falsy');
+      }
+
+      // Shortcuts for If Statements;
+      // Ternary Operator;
+      const result = true ? 'truthy' : 'falsy';
+      console.log(result);
+
+      age = 30;
+      let drink = age >= 18 ? 'wine' : 'water';
+      console.log(drink);
+
+      // Guard Operator;
+      false && console.log('Will not run');
+      true && console.log('Will run');
+
+      const myName = false && 'NPC';
+      console.log(myName);
+
+      const myName2 = true && 'NPC';
+      console.log(myName2);
+
+      let personAge = 15;
+      if (personAge >= 18) {
+        console.log('You are old enough to vote');
+      }
+
+      personAge >= 18 && console.log('You are old enough to vote');
+
+      // OR || Operator;
+      const currency = '' || 'USD';
+      console.log(currency);
+
+      const currency2 = 'EUR' || 'USD';
+      console.log(currency2);
+
+      const currentColor = undefined || null || '' || 'blue' || 0;
+      console.log(currentColor);
+    </script>
+  </body>
+</html>
