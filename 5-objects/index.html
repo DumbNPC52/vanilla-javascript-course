@@ -41,6 +41,104 @@
     delete character.weapon;
     console.log(typeof character);
     console.log(character);
+
+
+  const character2 = {
+    name: 'Ashen Hood',
+    skill: 'Toon Force',
+    weapon: 'Cartoon Physics',
+    occupation: 'Error 404: Storybreaker',
+    epithet: 'The Harbinger of Chaos',
+    age: 22,
+    ['current-location']: 'The Void',
+  };
+
+  // Accessing properties using bracket notation
+  console.log(character2);
+  console.log(character2['epithet']);
+  console.log(character2['current-location']);
+
+  // Adding other values to the object
+  const character3 = {
+    name: 'Big Mecha Pig/ Big Balls',
+    skill: 'Giant Robot Combat',
+    weapon: 'Laser Cannons, Rocket Fists',
+    occupation: 'Engineer',
+    epithet: 'The Mechanical Menace',
+    age: 35,
+    affiliation: {
+      faction: 'IronSteel Manufacturing',
+      role: 'Frontline Defender',
+      'wanted-level': 9.3,
+    },
+  };
+
+  console.log(character3);
+  console.log(character3.affiliation);
+  console.log(character3.affiliation['wanted-level']);
+
+  const character4 = {
+    name: 'Dumb NPC#0052',
+    skill: 'Little Princess Caretaker',
+    weapon: 'Master of Weapons',
+    occupation: 'Dumb Knight NPC, Script Glitch',
+    epithet: 'The Loyal Guardian',
+    age: 20,
+    description: {
+      height: "6'2",
+      weight: '180 lbs',
+      'hair-color': 'Brown',
+      'eye-color': 'Green',
+    },
+    intro:'A background knight created to protect the Princess of Mid-Earth. Every act of devotion she performs quietly rewrites the story, angering the Loop Fairies.',
+    dialogue: function dialogues() {
+      console.log('I do not wish to be horny anymore!');
+    },
+  };
+
+  console.log(character4);
+  console.log(character4.description);
+  console.log(character4.description['eye-color']);
+  character4.dialogue();
+
+  // Built-in Objects
+
+  // JavaScript Object Notation (JSON)
+  // Converting character4 object to JSON string
+  const jsonString = JSON.stringify(character4);
+  console.log(jsonString);
+
+  // Converting JSON string back to JavaScript object
+  const jsonObject = JSON.parse(jsonString);
+  console.log(jsonObject);
+
+  // Local Storage Object
+  // Storing character4 object in local storage
+  localStorage.setItem('character4', jsonString);
+  const storedCharacter = localStorage.getItem('character4');
+  console.log(JSON.parse(storedCharacter));
+
+  // Date Object
+  const currentDate = new Date();
+  console.log(currentDate);
+
+  // Auto-Boxing
+  // Is when JavaScript automatically converts primitive values to their corresponding object wrappers to access methods and properties.
+  console.log('yooooo'.length);
+  console.log('yoooooooooooooooooo'.toUpperCase());
+  console.log(52.0.toString());
+  console.log(true.toString());
+
+  // Objects as References
+  const originalCharacter = {
+    name: 'Original Hero',
+    age: 30,
+  };
+
+  const referenceCharacter = originalCharacter;
+  referenceCharacter.age = 35;
+  console.log(originalCharacter.age);
+  console.log(referenceCharacter);
   </script>
 </body>
 </html>
