@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="NPC">
+  <meta name="description" content="Learn about JavaScript objects">
+  <meta name="keywords" content="JavaScript, Objects, Programming">
+  <title>JavaScript Objects</title>
+</head>
+<body>
+
+  <!-- JavaScript Code Block -->
+  <script>
+    const character = {
+      name: 'Lady Bountiful',
+      skill: 'Remote Dealer, Master of Weapons',
+      weapon: 'Gun, Sword, Magic',
+      occupation: 'War Trader',
+      epithet: 'The Baroness of Hells',
+      age: 28
+    };
+
+    // Displaying the object and its properties
+    console.log(character);
+    console.log(character.epithet);
+    console.log(character.age);
+
+    // Modifying a property(Using a property to change a value inside the object)
+    character.epithet = 'The Ash Mother, The Wombless Queen, The Mother of the Broken Blade.';
+    console.log(character.epithet);
+
+    // Adding a new property
+    character.location = 'The Ashira';
+    console.log(character.location);
+
+    character.title = 'Lady Bountiful of Ashira, the Ash Mother';
+    console.log(character.title);
+
+    // Deleting a property
+    delete character.weapon;
+    console.log(typeof character);
+    console.log(character);
+  </script>
+</body>
+</html>
