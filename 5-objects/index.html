@@ -139,6 +139,36 @@
   referenceCharacter.age = 35;
   console.log(originalCharacter.age);
   console.log(referenceCharacter);
-  </script>
+
+  // Object Shortcuts
+  const newCharacter = {
+    name: 'Shortcut Hero',
+    age: 25,
+  };
+
+  // Destructuring Assignment
+  const { name, age } = newCharacter;
+  console.log(name);
+  console.log(age);
+
+  // Object Property Shorthand
+  const characterName = 'Shorthand Hero';
+  const characterAge = 28;
+  const shorthandCharacter = {
+    characterName,
+    characterAge,
+  };
+  console.log(shorthandCharacter);
+
+  // Shorthand Method
+  const methodCharacter = {
+    name: 'Method Hero',
+    age: 32,
+    greet() {
+      console.log(`Hello, I am ${this.name} and I am ${this.age} years old.`);
+    },
+  };
+  methodCharacter.greet();
+</script>
 </body>
 </html>
