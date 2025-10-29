@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="npc">
+  <meta name="description" content="Javascript lesson on the Document Object Model(DOM)">
+  <meta name="keywords" content="javascript, DOM">
+  <title>Document Object Model(DOM)</title>
+</head>
+<body>
+  <p>The Document Object Model (DOM)</p>
+
+  <button>Hello</button>
+  <button class="js-world-btn">World</button>
+
+  <!-- Javascript Code Block -->
+  <script>
+    // The document object represents/ models the webpage;
+    /*
+    console.log(document.title);
+    document.title = 'LadyB';
+
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>Lady Bountiful</button>';
+
+    console.log(document.body.outerHTML);
+    */
+
+    /*
+    document.body.innerHTML = '<h1>This is my first heading</h1>';
+    console.log(document.body.innerHTML);
+
+    document.title = 'Heyy There!!!';
+    console.log(document.title);
+    */
+
+    // DOM Methods
+    console.log(document.querySelector('p'));
+    console.log(document.querySelector('button').innerHTML);
+
+    document.querySelector('button')
+      .innerHTML = 'Click Me!!!';
+
+    const buttonElement = document.querySelector('.js-world-btn');
+    console.log(buttonElement);
+  </script>
+</body>
+</html>
+
